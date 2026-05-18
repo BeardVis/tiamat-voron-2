@@ -1,5 +1,8 @@
 # Voron 2.4 300×300 — *Tiamat*
 
+<img src="./config/.theme/sidebar-logo.svg" align="left" style="margin-right: 10px;" alt="Tiamat logo" width="100" height="100">
+
+
 *Tiamat* is a custom [Voron 2.4](https://github.com/VoronDesign/Voron-2) CoreXY 3D printer build (300×300×280 mm print volume), focused on high-speed, reliable printing via CAN bus toolhead communication and a clean Klipper/Mainsail software stack.
 
 ![Status](https://img.shields.io/badge/Status-Stable-green)
@@ -67,7 +70,7 @@
 | Component | Part |
 | --- | --- |
 | Filament Sensor | [BTT Smart Filament Sensor V2.0](https://github.com/bigtreetech/smart-filament-detection-module/tree/master/V2.0) with [custom mount](./CAD/sfs_mount.f3d) |
-| Chamber Sensor | [AHT30 Temperature & Humidity Sensor](https://www.aliexpress.com/item/1005008053575938.html) with [custom bracket](./CAD/aht30_mount.f3d) (mounted to umbilical) |
+| Chamber Sensor | [AHT30 Temperature & Humidity Sensor](https://www.aliexpress.com/item/1005008053575938.html) with [custom bracket](./CAD/aht30_mount.f3d) (frame-mounted) |
 
 ---
 
@@ -184,15 +187,9 @@ Long-term additions under consideration:
 
 ### Extruder Grounding (EMI/ESD Fix)
 
-One of the critical hardware iterations in this build was addressing EMI and Static Electricity (ESD) issues related to the extruder motor within the Stealthburner toolhead.
+One of the critical hardware iterations in this build was addressing EMI and Static Electricity (ESD) issues related to the extruder motor.
 
-**The Problem:** During long prints, the NEMA 14 motor can accumulate static charges. Since the Stealthburner is primarily plastic, this charge has no path to ground, leading to intermittent CAN bus communication errors and random MCU shutdowns.
-
-**The Solution:** A dedicated grounding wire was added, connecting the metal casing of the extruder motor directly to the printer's common ground (frame/PSU V-).
-
-**Result:** Complete elimination of "Timer too close" and communication timeout errors.
-
-> **⚠️ Software Caveat:** It has been observed that applying `tmc_autotune` to the extruder motor can sometimes trigger similar communication errors. If issues persist after grounding, consider disabling `tmc_autotune` for the extruder.
+For a detailed explanation of the problem, the solution, and results, see [GitHub Issue #1](https://github.com/BeardVis/tiamat-voron-2/issues/1).
 
 ---
 
