@@ -1,0 +1,188 @@
+{
+    "general": {
+        "calcPrintProgress": "slicer",
+        "printername": "Tiamat"
+    },
+    "console": {
+        "entryStyle": "default",
+        "height": 430
+    },
+    "control": {
+        "extruder": {
+            "feedamount": 10,
+            "feedrate": 5
+        },
+        "style": "bars"
+    },
+    "dashboard": {
+        "nonExpandPanels": {
+            "widescreen": [],
+            "desktop": []
+        }
+    },
+    "gcodeViewer": {
+        "klipperCache": {
+            "kinematics": "corexy",
+            "axis_maximum": [
+                300,
+                300,
+                290,
+                0
+            ],
+            "axis_minimum": [
+                -2,
+                -2,
+                -5,
+                0
+            ]
+        }
+    },
+    "macros": {
+        "mode": "expert",
+        "macrogroups": {
+            "4cad79f1-e0cd-4b85-bb7b-0e848a43d644": {
+                "name": "Basic",
+                "color": "primary",
+                "colorCustom": "#fff",
+                "showInStandby": true,
+                "showInPause": false,
+                "showInPrinting": false,
+                "macros": [
+                    {
+                        "pos": 1,
+                        "name": "HOME_LAZY",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    }
+                ]
+            },
+            "1daf49f7-1178-4def-a556-cf891db43b6a": {
+                "name": "Test",
+                "color": "secondary",
+                "colorCustom": "#fff",
+                "showInStandby": true,
+                "showInPause": false,
+                "showInPrinting": false,
+                "macros": [
+                    {
+                        "pos": 1,
+                        "name": "CHECK_AXES_CONFIG",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    },
+                    {
+                        "pos": 2,
+                        "name": "TEST_RESONANCES_X",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    },
+                    {
+                        "pos": 3,
+                        "name": "TEST_RESONANCES_Y",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    }
+                ]
+            },
+            "31d2887a-9022-43e6-9639-cd0e6f337e90": {
+                "name": "Maintain",
+                "color": "secondary",
+                "colorCustom": "#fff",
+                "showInStandby": true,
+                "showInPause": true,
+                "showInPrinting": false,
+                "macros": [
+                    {
+                        "pos": 1,
+                        "name": "UNLOAD_FILAMENT",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    },
+                    {
+                        "pos": 2,
+                        "name": "LOAD_FILAMENT",
+                        "color": "group",
+                        "showInStandby": true,
+                        "showInPrinting": true,
+                        "showInPause": true
+                    }
+                ]
+            }
+        }
+    },
+    "miscellaneous": {
+        "entries": {
+            "86c71907-90eb-4951-8f01-95f50603982b": {
+                "name": "sb_leds",
+                "type": "neopixel",
+                "lightgroups": {},
+                "presets": {
+                    "533f0949-2599-4241-9e41-79ce7661cfee": {
+                        "name": "Red",
+                        "red": 255,
+                        "green": 0,
+                        "blue": 0,
+                        "white": 0
+                    }
+                }
+            }
+        }
+    },
+    "remoteprinters": {
+        "printers": {}
+    },
+    "uiSettings": {
+        "boolBigThumbnail": true,
+        "displayCancelPrint": true,
+        "defaultNavigationStateSetting": "lastState",
+        "logo": "#E56910",
+        "primary": "#E56910",
+        "theme": "mainsail",
+        "mode": "dark"
+    },
+    "view": {
+        "extruder": {
+            "showPressureAdvance": false
+        },
+        "heightmap": {
+            "mesh": true,
+            "flat": true,
+            "scaleZMax": 0.9,
+            "probed": true,
+            "wireframe": true,
+            "scaleGradient": false
+        },
+        "configfiles": {
+            "countPerPage": 25,
+            "showHiddenFiles": true
+        },
+        "tempchart": {
+            "datasetSettings": {
+                "tmc2240 stepper_x": {
+                    "color": "#B94A21"
+                },
+                "tmc2240 stepper_y": {
+                    "color": "#C49051"
+                },
+                "temperature_sensor CB1_Host": {
+                    "color": "#8E379D",
+                    "temperature": false
+                },
+                "temperature_sensor STM32_MCU": {
+                    "color": "#FFDE03",
+                    "temperature": false
+                }
+            }
+        }
+    }
+}

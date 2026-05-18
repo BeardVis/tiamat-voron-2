@@ -1,0 +1,25 @@
+{
+    "adaptive_bed_mesh_margin": "5",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\nSET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}\n;[layer_z]\nG92 E0\n",
+    "fan_speedup_time": "0.5",
+    "from": "User",
+    "inherits": "Voron 2.4 300 0.4 nozzle",
+    "machine_end_gcode": "PRINT_END\n; total layers count = [total_layer_count]",
+    "machine_start_gcode": "SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]\nPRINT_START EXTRUDER=[nozzle_temperature_initial_layer] BED=[bed_temperature_initial_layer_single] PRINT_MIN={adaptive_bed_mesh_min[0]},{adaptive_bed_mesh_min[1]} PRINT_MAX={adaptive_bed_mesh_max[0]},{adaptive_bed_mesh_max[1]}",
+    "name": "Voron 2.4 300 0.4 - Tiamat",
+    "printer_extruder_id": [
+        "1"
+    ],
+    "printer_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "printer_settings_id": "Voron 2.4 300 0.4 - Tiamat",
+    "purge_in_prime_tower": "0",
+    "retract_lift_above": [
+        "0.4"
+    ],
+    "single_extruder_multi_material": "0",
+    "support_multi_bed_types": "1",
+    "thumbnails": "32x32/PNG, 400x300/PNG",
+    "version": "2.3.1.0"
+}
